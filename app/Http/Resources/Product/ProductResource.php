@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Http\Resources\Product;
+
+use Illuminate\Http\Resources\Json\Resource;
+
+class ProductResource extends Resource
+{
+    /**
+     * Transform the resource into an array.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    public function toArray($request)
+    {
+        // return parent::toArray($request);
+        // this help if any change happened 
+        return [
+            'name'=>$this->name,
+            'description'=>$this->detail,
+            'price'=>$this->price,
+            'stock'=>$this->stock,
+            'discount'=>$this->discount,
+            
+        ];
+    }
+}
