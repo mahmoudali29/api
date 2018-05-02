@@ -4,7 +4,7 @@ namespace App\Http\Resources\Review;
 
 use Illuminate\Http\Resources\Json\Resource;
 
-class ReviewRecource extends Resource
+class ReviewResource extends Resource
 {
     /**
      * Transform the resource into an array.

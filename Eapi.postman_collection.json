@@ -1,0 +1,350 @@
+{
+	"id": "418b5ce2-f46f-1221-08b9-72addbde9d8f",
+	"name": "Eapi",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": null,
+	"order": [],
+	"folders_order": [
+		"0a7e7a24-e380-3d35-25c2-537e9864ba75",
+		"cf396167-8fdc-4cf5-8ff8-6228011599d2",
+		"8c0c1195-ab34-41f2-bb48-30f78708ae57"
+	],
+	"folders": [
+		{
+			"id": "8c0c1195-ab34-41f2-bb48-30f78708ae57",
+			"name": "OAuth",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "418b5ce2-f46f-1221-08b9-72addbde9d8f",
+			"folder": null,
+			"order": [
+				"acf65e46-4ce1-4010-9234-ef11ce8a6cb4"
+			],
+			"folders_order": []
+		},
+		{
+			"id": "0a7e7a24-e380-3d35-25c2-537e9864ba75",
+			"name": "Products",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "418b5ce2-f46f-1221-08b9-72addbde9d8f",
+			"folder": null,
+			"order": [
+				"952fa688-d0ad-4833-a01a-b0d82a9c8445",
+				"ab3c08fe-648c-adf6-119f-0ceea487a48b",
+				"1ecf766e-8977-13b2-0b40-067e6bc2dbf9",
+				"7d60ff7e-0700-42eb-be2a-6718fc07d748",
+				"a24df47f-c032-42c9-a061-b11b45796d4b"
+			],
+			"folders_order": []
+		},
+		{
+			"id": "cf396167-8fdc-4cf5-8ff8-6228011599d2",
+			"name": "Reviews",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "418b5ce2-f46f-1221-08b9-72addbde9d8f",
+			"folder": null,
+			"order": [
+				"766dda75-4d6f-4a23-8076-2935e1c3532d",
+				"23f9a349-611f-4bf9-8661-6efd617191b7",
+				"bda51339-aaec-4cc2-9b7e-0b8ddd7aebc1",
+				"69d71663-114d-4416-b16d-440d337c4bc2"
+			],
+			"folders_order": []
+		}
+	],
+	"requests": [
+		{
+			"id": "1ecf766e-8977-13b2-0b40-067e6bc2dbf9",
+			"name": "Product Create",
+			"url": "http://127.0.0.1:8000/api/products",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "{{auth}}",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "0a7e7a24-e380-3d35-25c2-537e9864ba75",
+			"rawModeData": "{\n  \"name\": \"iphone8\",\n  \"description\": \"Quis et quam earum iste. Impedit commodi vel est et.\",\n  \"price\": 590,\n  \"stock\": 9,\n  \"totalPrice\": 572.3,\n  \"rating\": 4,\n  \"discount\": 3\n}\n",
+			"headers": "Content-Type: application/json\nAccept: application/json\nAuthorization: {{auth}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "23f9a349-611f-4bf9-8661-6efd617191b7",
+			"name": "Review Create",
+			"url": "http://127.0.0.1:8000/api/products/4/reviews",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "{{auth}}",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "cf396167-8fdc-4cf5-8ff8-6228011599d2",
+			"rawModeData": "{\n  \"customer\": \"nasr\",\n  \"star\": 4 , \n  \"review\" :\"Test\"\n}\n",
+			"headers": "Content-Type: application/json\nAccept: application/json\nAuthorization: {{auth}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "69d71663-114d-4416-b16d-440d337c4bc2",
+			"name": "Reviews All",
+			"url": "http://127.0.0.1:8000/api/products/4/reviews",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "cf396167-8fdc-4cf5-8ff8-6228011599d2",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "766dda75-4d6f-4a23-8076-2935e1c3532d",
+			"name": "Review Update",
+			"url": "http://127.0.0.1:8000/api/products/4/reviews/310",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "{{auth}}",
+					"enabled": true
+				}
+			],
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "cf396167-8fdc-4cf5-8ff8-6228011599d2",
+			"rawModeData": "{\n    \"customer\": \"mahmoud Ali\",\n    \"star\": 4,\n    \"review\": \"Great work\"\n}\n\n",
+			"headers": "Content-Type: application/json\nAccept: application/json\nAuthorization: {{auth}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "7d60ff7e-0700-42eb-be2a-6718fc07d748",
+			"name": "Product Update",
+			"url": "http://127.0.0.1:8000/api/products/92",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "{{auth}}",
+					"enabled": true
+				}
+			],
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "0a7e7a24-e380-3d35-25c2-537e9864ba75",
+			"rawModeData": "{\n  \"name\": \"test\",\t\n  \"description\": \"New Updated.\",\n  \"price\": 590,\n  \"stock\": 9,\n  \"totalPrice\": 572.3,\n  \"rating\": 4,\n  \"discount\": 3\n}\n",
+			"headers": "Content-Type: application/json\nAccept: application/json\nAuthorization: {{auth}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "952fa688-d0ad-4833-a01a-b0d82a9c8445",
+			"name": "Product All",
+			"url": "http://127.0.0.1:8000/api/products",
+			"description": null,
+			"data": [],
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "0a7e7a24-e380-3d35-25c2-537e9864ba75",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "a24df47f-c032-42c9-a061-b11b45796d4b",
+			"name": "Product Destroy",
+			"url": "http://127.0.0.1:8000/api/products/50",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "{{auth}}",
+					"enabled": true
+				}
+			],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "0a7e7a24-e380-3d35-25c2-537e9864ba75",
+			"rawModeData": "{\n  \"name\": \"test\",\t\n  \"description\": \"New Updated.\",\n  \"price\": 590,\n  \"stock\": 9,\n  \"totalPrice\": 572.3,\n  \"rating\": 4,\n  \"discount\": 3\n}\n",
+			"headers": "Content-Type: application/json\nAccept: application/json\nAuthorization: {{auth}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ab3c08fe-648c-adf6-119f-0ceea487a48b",
+			"name": "Product Show",
+			"url": "http://127.0.0.1:8000/api/products/4",
+			"description": null,
+			"data": [],
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "0a7e7a24-e380-3d35-25c2-537e9864ba75",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "acf65e46-4ce1-4010-9234-ef11ce8a6cb4",
+			"name": "Get Token",
+			"url": "http://127.0.0.1:8000/oauth/token",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "8c0c1195-ab34-41f2-bb48-30f78708ae57",
+			"rawModeData": "{\n\t\"grant_type\" : \"password\" , \n\t\"client_id\" : \"2\" , \n\t\"client_secret\" : \"J8zeiAHfCtQUltEaiSqiegyIUiUJUoSayt5yhEWw\",\n\t\"username\" : \"wellington81@example.com\",\n\t\"password\" : \"secret\"\n}",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "bda51339-aaec-4cc2-9b7e-0b8ddd7aebc1",
+			"name": "Review Destroy",
+			"url": "http://127.0.0.1:8000/api/products/4/reviews/309",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "{{auth}}",
+					"enabled": true
+				}
+			],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "cf396167-8fdc-4cf5-8ff8-6228011599d2",
+			"rawModeData": "",
+			"headers": "Content-Type: application/json\nAccept: application/json\nAuthorization: {{auth}}\n",
+			"pathVariables": {}
+		}
+	]
+}
